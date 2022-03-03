@@ -6,7 +6,7 @@
 <meta name="description" content="galaxy display">    
 <title>galaxy display</title>    
 <style>
-html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;}
+html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;transform-origin:0px 0px 0px;}
     
 #app {
     width: 100%;
@@ -21,6 +21,7 @@ html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;}
 }
 #background {
     position: absolute;
+    overflow:hidden;
     background-color: #000000;
     width: 100%;
     height: 100%;
@@ -49,12 +50,13 @@ html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;}
         $(function() {
             //offsetWidth： 获取body元素对象的宽度，即offsetWidth=width+padding+border availWidth：返回当前屏幕宽度
             var scale = document.body.clientWidth / 1920;
-            $(document.body).css("zoom",  scale );
+            $(document.body).css("transform", "scale("+scale+")");
         });
         $(window).resize(function() {
             var scale = document.body.clientWidth / 1920;
-            $(document.body).css("zoom", scale );
+            $(document.body).css("transform", "scale("+scale+")" );
         });
+
 
      </script>
 </html>
