@@ -39,8 +39,6 @@ html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;tran
 <body>
 
  <div id="background">
-        <img src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/icon/background4.jpg"/>
- 
  </div>
 <div id="app">    
       <div id="chart1" ></div>
@@ -51,11 +49,11 @@ html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;tran
         // 一开始加载就适应屏幕的宽高
         $(function() {
             //offsetWidth： 获取body元素对象的宽度，即offsetWidth=width+padding+border availWidth：返回当前屏幕宽度
-            var scale = document.body.clientWidth / 1920;
+            var scale = document.body.clientWidth / 1820;
             $(document.body).css("transform", "scale("+scale+")");
         });
         $(window).resize(function() {
-            var scale = document.body.clientWidth / 1920;
+            var scale = document.body.clientWidth / 1820;
             $(document.body).css("transform", "scale("+scale+")" );
         });
 
