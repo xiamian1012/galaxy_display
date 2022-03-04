@@ -6,24 +6,13 @@
 <meta name="description" content="galaxy display">    
 <title>galaxy display</title>    
 <style>
-html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;transform-origin:0px 0px 0px;}
-    
-#app1 {
-    height: 2328px;
-    width: 1920px;
-}
-#app {
-
-}    
-#background {
-    position: absolute;
-    overflow:hidden;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    z-index: 0;
-}
-    
+    html,body{height:100%;
+        width:100%;
+        padding:0px;
+        margin:0;
+        box-sizing:border-box;
+        transform-origin:0px 0px 0px;
+    }
 #chart1 {
     position: absolute;
     top: 0px;
@@ -31,8 +20,6 @@ html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;tran
     width:100%;
     height: 100%;
 }
-
-
 </style>
 <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.1.2/echarts.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -41,27 +28,8 @@ html,body{height:100%;width:100%;padding:0px;margin:0;box-sizing:border-box;tran
 
 </head>
 <body>
-<div id="app1">
- <div id="background">
- </div>
-</div>
-<div id="app">    
       <div id="chart1" ></div>
-</div>
 </body>
 <script src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/js/galaxy_v1.min.js"></script>
-        <script type="text/javascript">
-        // 一开始加载就适应屏幕的宽高
-        $(function() {
-            //offsetWidth： 获取body元素对象的宽度，即offsetWidth=width+padding+border availWidth：返回当前屏幕宽度
-            var scale = document.body.clientWidth / 1820;
-            $(document.body).css("transform", "scale("+scale+")");
-        });
-        $(window).resize(function() {
-            var scale = document.body.clientWidth / 1820;
-            $(document.body).css("transform", "scale("+scale+")" );
-        });
 
-
-     </script>
 </html>
